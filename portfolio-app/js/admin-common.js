@@ -1,0 +1,2 @@
+async function protect(){if(!sb){location.href='login.html';return}const {data}=await sb.auth.getSession();if(!data.session){location.href='login.html';return}const el=document.getElementById('adminEmail');if(el)el.textContent=data.session.user.email;}
+const logoutBtn=document.getElementById('logout');if(logoutBtn)logoutBtn.addEventListener('click',async()=>{await sb.auth.signOut();location.href='login.html'});protect();

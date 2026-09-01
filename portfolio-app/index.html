@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blueframe Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="site-bg"></div>
+  <header class="nav container">
+    <a class="brand" href="index.html"><span class="brand-mark" id="navLogoFallback">B</span><img id="navLogo" class="brand-logo hidden" alt="Logo"></a>
+    <nav>
+      <a href="#work">ผลงาน</a>
+      <a href="#about">เกี่ยวกับ</a>
+      <a href="portfolio.html">สำรวจคลิป</a>
+      <a class="nav-admin" href="admin/index.html">หลังบ้าน</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow">VIDEO EDITOR · CREATIVE PORTFOLIO</div>
+        <h1>เปลี่ยนฟุตเทจธรรมดา<br><span>ให้กลายเป็นเรื่องที่น่าดู</span></h1>
+        <p id="heroBio">รวมผลงานตัดต่อวิดีโอที่คัดเลือกมา พร้อมพื้นที่สำหรับเล่าแนวคิดและสไตล์งานของเรา</p>
+        <div class="hero-actions"><a class="btn primary" href="portfolio.html">สำรวจคลิปทั้งหมด</a><a class="btn ghost" href="#about">ดูโปรไฟล์</a></div>
+        <div class="hero-meta"><span>01 / Portfolio</span><span>Editing · Social · Commercial</span></div>
+      </div>
+      <div class="hero-card glass">
+        <div class="hero-orb"></div><div class="mini-label">FEATURED WORK</div>
+        <h3 id="featuredTitle">กำลังโหลดผลงานเด่น...</h3>
+        <p id="featuredDesc">เลือกคลิป Featured จากหลังบ้าน แล้วระบบจะแสดงตรงนี้อัตโนมัติ</p>
+        <a id="featuredLink" class="text-link" href="portfolio.html">ดูผลงาน →</a>
+      </div>
+    </section>
+
+    <section id="work" class="section container">
+      <div class="section-head"><div><div class="eyebrow">SELECTED WORK</div><h2>ผลงานที่คัดมาให้ชม</h2></div><a class="text-link" href="portfolio.html">ดูทั้งหมด →</a></div>
+      <div id="homeGrid" class="video-grid"></div>
+      <div id="homeEmpty" class="empty-state hidden">ยังไม่มีผลงานเผยแพร่ในตอนนี้</div>
+    </section>
+
+    <section id="about" class="section about container">
+      <div class="about-photo glass"><img id="profileImage" alt="Profile" class="hidden"><div id="profileFallback" class="profile-fallback">PROFILE</div></div>
+      <div><div class="eyebrow">ABOUT THE SHOP</div><h2 id="shopName">Blueframe Studio</h2><p id="shopDescription">พื้นที่เล็ก ๆ สำหรับรวบรวมงานตัดคลิป งานครีเอทีฟ และโปรเจกต์ที่อยากเล่าในแบบของตัวเอง</p><div class="about-note" id="aboutBio">Creative editing, pacing, typography and visual storytelling.</div></div>
+    </section>
+
+    <section id="profile-media" class="section container profile-media-section">
+      <div class="section-head"><div><div class="eyebrow">PROFILE MEDIA</div><h2>มุมที่อยากให้คุณเห็น</h2></div><span class="section-note">รูปภาพ · เบื้องหลัง · คลิปแนะนำ</span></div>
+      <div id="profileMediaGrid" class="profile-media-grid"></div>
+      <div id="profileMediaEmpty" class="empty-state hidden">ยังไม่มีสื่อแนะนำตัวในตอนนี้</div>
+    </section>
+  </main>
+  <footer class="footer container"><span id="footerName">Blueframe Studio</span><span>© <span id="year"></span></span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script><script src="js/supabase.js"></script><script src="js/home.js"></script>
+</body></html>
